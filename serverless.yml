@@ -10,8 +10,9 @@ frameworkVersion: "3"
 provider:
   name: aws
   runtime: nodejs18.x
-  stage: dev
+  stage: ${opt:stage,'dev'}
   region: us-east-1
+  
 
 functions:
   authorizer:
@@ -81,11 +82,12 @@ functions:
           path: notes
           authorizer: 
             name: userpool_authorizer
-            type: COGNITO_USER_POOLS
             arn: !GetAtt cognitoUserPool.Arn
+            type: COGNITO_USER_POOLS
+            # arn: !GetAtt cognitoUserPool.Arn
 
 
-            # arn: ${ssm:/notes/dev/userPoolId}
+            # arn: ${ssm:/notes/${self:provider.stage}/userPoolArn}
 
           #   arn: arn:aws:cognito-idp:us-east-1:863572446124:userpool/us-east-1_X6u6GhqYn
 
@@ -95,7 +97,7 @@ plugins:
 # you can add CloudFormation resource templates here
 resources:
   Resources: ${file(resources.yml)}
-# 55
+# 67  
 
 #  Outputs:
 #     NewOutput:

@@ -16,7 +16,8 @@ pw = 8FSI/y53OBaLJg8Cnn3dLMVoT7t6ZFgRcA/Fhf6f
 # Add Plugin
 * npm i --save-dev serverless-iam-roles-per-function
 
-https://<your user pool domain>/authorize?client_id=<your app client ID>&response_type=<code/token>&scope=<scopes to request>&redirect_uri=<your callback URL>
+https://<your user pool domain>/authorize?client_id=<your app client ID>&response_type=<code/token>&scope=<scopes to request>&redirect_uri=<your callback URL> 
+
 
 https://snd-dev.auth.us-east-1.amazoncognito.com/login?response_type=token&client_id=<your_app_client_id>&redirect_uri=<your_callback_url>
 
