@@ -1,10 +1,10 @@
 * npm install -g serverless
 * serverless config credentials --provider aws --key 1234 --secret 5678
 
-key = AKIA4SEHNZOWM7TCLZZY
-pw = 8FSI/y53OBaLJg8Cnn3dLMVoT7t6ZFgRcA/Fhf6f
 
-# Profile "default" is already configured in ~/.aws/credentials. Use the overwrite flag ("-o" or "--overwrite") to force the update.
+
+
+ Profile "default" is already configured in ~/.aws/credentials. Use the overwrite flag ("-o" or "--overwrite") to force the update.
 
 # create serverless templae aws-nodejs
 * serverless create -t aws-nodejs
